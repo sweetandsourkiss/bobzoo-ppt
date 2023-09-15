@@ -23,32 +23,54 @@
           format("truetype");
         font-weight: normal;
       }
-      #H2 {
+      .H2 {
         margin-bottom: 10vh;
       }
-      #flex {
+      .flex-row {
         display: flex;
         justify-content: center;
         align-items: flex-start;
         gap: 100px;
       }
-      #flex-column {
+      .flex-column {
         flex-direction: column;
       }
-      #tomato {
+      .tomato {
         color: tomato;
       }
-      #blue {
+      .blue {
         color: #22c1c3;
         font-size: 28px;
       }
-      #green {
+      .yellow {
         color: #fdbb2d;
         font-size: 28px;
       }
 
-      #desc {
+      .desc {
         font-size: 24px;
+        color: rgb(86, 204, 113);
+      }
+      .img {
+        margin: 0;
+        width: 128px;
+        height: 128px;
+      }
+      .thxReveal {
+        color: black;
+        display: flex;
+        width: fit-content;
+        align-items: center;
+        gap: 20px;
+        background: linear-gradient(45deg, #22c1c3, #fdbb2d);
+        padding: 0 50px;
+        border-radius: 25px;
+        scale: 0.6;
+      }
+      #title {
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
       }
       ul {
         text-align: center;
@@ -67,41 +89,30 @@
           data-background-video-muted
           data-background-size="contain"
           data-background-opacity="0.5"
-          style="justify-content: center; align-items: center; margin-top: 10vh"
-          id="flex-column"
+          class="flex-column"
+          id="title"
         >
+          <p></p>
           <p style="border-radius: 20px; width: fit-content">
-            <img src="pics/Logo.png" width="900" height="200" />
+            <img src="pics/Logo.png" />
           </p>
-          <p
-            style="
-              color: black;
-              display: flex;
-              width: fit-content;
-              align-items: center;
-              gap: 20px;
-              background: linear-gradient(45deg, #22c1c3, #fdbb2d);
-              padding: 0 50px;
-              border-radius: 25px;
-              scale: 0.6;
-            "
-          >
+          <p class="thxReveal">
             Made By
             <img src="https://revealjs.com/images/logo/reveal-black-text.svg" />
           </p>
         </section>
-        <section id="flex-column">
-          <h2 id="H2">목차</h2>
+        <section class="flex-column">
+          <h2 class="H2">목차</h2>
           <div>
             <ul>
-              <li id="tomato">오마주</li>
-              <li id="tomato">에셋</li>
-              <li id="tomato">스토리</li>
-              <li id="tomato">상세</li>
-              <li id="tomato">조작법</li>
-              <li id="tomato">시연</li>
-              <li id="tomato">개선점</li>
-              <li id="tomato">추가 기능</li>
+              <li class="tomato">오마주</li>
+              <li class="tomato">에셋</li>
+              <li class="tomato">스토리</li>
+              <li class="tomato">상세</li>
+              <li class="tomato">조작법</li>
+              <li class="tomato">시연</li>
+              <li class="tomato">개선점</li>
+              <li class="tomato">추가 기능</li>
             </ul>
           </div>
         </section>
@@ -113,12 +124,12 @@
             data-background-size="contain"
             data-background-opacity="0.5"
             data-auto-animate
-            id="flex-column"
+            class="flex-column"
           >
-            <h2 id="H2">오마주</h2>
+            <h2 class="H2">오마주</h2>
             <div>
-              <p id="tomato">1. 크랩 챔피언</p>
-              <p id="blue">시원한 조작감</p>
+              <p class="tomato">크랩 챔피언</p>
+              <p class="blue">조작감</p>
             </div>
           </section>
           <section
@@ -128,12 +139,12 @@
             data-background-size="contain"
             data-background-opacity="0.5"
             data-auto-animate
-            id="flex-column"
+            class="flex-column"
           >
-            <h2 id="H2">오마주</h2>
+            <h2 class="H2">오마주</h2>
             <div>
-              <p id="tomato">2. 슬라임 랜처</p>
-              <p id="green">캐주얼, 귀여움</p>
+              <p class="tomato">슬라임 랜처</p>
+              <p class="yellow">귀여움</p>
             </div>
           </section>
           <section
@@ -142,19 +153,23 @@
             data-background-video-muted
             data-background-size="contain"
             data-background-opacity="0.5"
-            data-auto-animate=""
-            style="flex-direction: column"
+            data-auto-animate
+            class="flex-column"
           >
-            <h2 id="H2">컨셉</h2>
-            <div>
-              <p id="tomato">1. 크랩 챔피언</p>
-              <p id="blue">시원한 조작감</p>
-              <p id="tomato">2. 슬라임 랜처</p>
-              <p id="green">캐주얼, 귀여움</p>
+            <h2 class="H2">컨셉</h2>
+            <div class="flex-row">
+              <div>
+                <p class="tomato">크랩 챔피언</p>
+                <p class="blue">조작감</p>
+              </div>
+              <div>
+                <p class="tomato">슬라임 랜처</p>
+                <p class="yellow">귀여움</p>
+              </div>
             </div>
           </section>
         </section>
-        <section id="flex-column">
+        <section class="flex-column">
           <h2>에셋</h2>
           <ul class="r-stack">
             <img class="fragment fade-up" src="pics/p1.png" />
@@ -162,89 +177,104 @@
             <img class="fragment fade-up" src="pics/p3.png" />
             <img class="fragment fade-up" src="pics/p4.png" />
             <img class="fragment fade-up" src="pics/p5.png" />
+            <img class="fragment fade-up" src="pics/p6.png" />
           </ul>
         </section>
-        <section id="flex-column">
-          <h2 id="H2">스토리</h2>
-          <p id="blue">플레이어 - 동물에게 먹이는 주는 사육사</p>
-          <p id="green">적 - 밥을 달라고 사육사에게 달려드는 동물</p>
+        <section class="flex-column">
+          <h2 class="H2">스토리</h2>
+          <p class="blue">플레이어 - 동물에게 먹이를 주는 사육사</p>
+          <p class="yellow">적 - 밥을 달라고 사육사에게 달려드는 동물</p>
           <p>
-            <img src="pics/p6.png" width="400" height="300" />
-            <img src="pics/p7.png" width="400" height="200" />
+            <img src="pics/p14.png" width="400" height="250" />
+            <img src="pics/p7.png" width="400" height="250" />
           </p>
         </section>
-        <section id="flex-column" data-auto-animate>
-          <section id="flex-column" data-auto-animate>
-            <h2 id="H2">상세</h2>
-            <div id="flex">
+        <section class="flex-column" data-auto-animate>
+          <section class="flex-column" data-auto-animate>
+            <h2 class="H2">상세</h2>
+            <div class="flex-row">
               <div>
-                <p id="tomato">사파리(대기실)</p>
-                <ul id="flex">
-                  <li id="green">방 입장</li>
-                  <li id="green">게임 시작</li>
-                </ul>
+                <p class="tomato">사파리(대기실)</p>
+                <div class="flex-row">
+                  <div class="yellow">
+                    <p style="text-align: left">방 입장</p>
+                  </div>
+                  <div class="yellow">
+                    <p style="text-align: left">게임 시작</p>
+                  </div>
+                </div>
               </div>
             </div>
           </section>
-          <section id="flex-column" data-auto-animate>
-            <h2 id="H2">상세</h2>
-            <div id="flex">
+          <section class="flex-column" data-auto-animate>
+            <h2 class="H2">상세</h2>
+            <div class="flex-row">
               <div>
-                <p id="tomato">사파리(대기실)</p>
-                <ul id="flex">
-                  <li id="green">방 입장</li>
-                  <li id="green">게임 시작</li>
-                </ul>
+                <p class="tomato">사파리(대기실)</p>
+                <div class="flex-row">
+                  <div class="yellow">
+                    <p style="text-align: left">방 입장</p>
+                  </div>
+                  <div class="yellow">
+                    <p style="text-align: left">게임 시작</p>
+                  </div>
+                </div>
               </div>
               <div>
-                <p id="tomato">인게임</p>
-                <ul id="flex">
-                  <li id="blue">
-                    <p>스테이지</p>
-                  </li>
-                  <li id="blue">
-                    <p>전투 시나리오</p>
-                  </li>
-                </ul>
+                <p class="tomato">인게임</p>
+                <div class="flex-row">
+                  <div class="blue">
+                    <p style="text-align: left">스테이지</p>
+                  </div>
+                  <div class="blue">
+                    <p style="text-align: left">전투 시나리오</p>
+                  </div>
+                </div>
               </div>
             </div>
           </section>
-          <section id="flex-column" data-auto-animate>
-            <h2 id="H2">상세</h2>
-            <div id="flex">
+          <section class="flex-column" data-auto-animate>
+            <h2 class="H2">상세</h2>
+            <div class="flex-row">
               <div>
-                <p id="tomato">인게임</p>
-                <ul id="flex">
-                  <li id="blue">
-                    <p>스테이지</p>
-                    <p id="desc">4 웨이브 + 1 보스 웨이브</p>
-                  </li>
-                  <li id="blue">
-                    <p>전투 시나리오</p>
-                    <p id="desc">
+                <p class="tomato">인게임</p>
+                <div class="flex-row">
+                  <div class="blue">
+                    <p style="text-align: left">1.스테이지</p>
+                    <p class="desc" style="text-align: left">
+                      4 웨이브 + 1 보스 웨이브
+                    </p>
+                  </div>
+                  <div class="blue">
+                    <p style="text-align: left">2.전투 시나리오</p>
+                    <p class="desc" style="text-align: left">
                       적의 포만감을 100 채우면 승천(사망), 골드 드랍
                     </p>
-                    <p id="desc">
+                    <p class="desc" style="text-align: left">
                       골드를 사용하여 상점에서 각종 아이템을 구매하여 성장
                     </p>
-                    <p id="desc">플레이어 체력이 0이 되면 헝그로기 상태</p>
-                    <p id="desc">파티원이 포만감을 채워주면 부활</p>
-                  </li>
-                </ul>
+                    <p class="desc" style="text-align: left">
+                      플레이어 체력이 0이 되면 헝그로기 상태
+                    </p>
+                    <p class="desc" style="text-align: left">
+                      파티원이 포만감을 채워주면 부활
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </section>
         </section>
-        <section id="flex-column">
-          <h2 id="H2">조작법</h2>
+        <section class="flex-column">
+          <h2 class="H2">조작법</h2>
           <div>
             <ul>
-              <li id="tomato">이동 - WASD</li>
-              <li id="tomato">점프 - SpaceBar</li>
-              <li id="tomato">대쉬 - L Shift</li>
-              <li id="tomato">상점 - Tab</li>
-              <li id="tomato">마우스 좌 - 공격</li>
-              <li id="tomato">마우스 우 - 스킬</li>
+              <li class="tomato">이동 - WASD</li>
+              <li class="tomato">점프 - SpaceBar</li>
+              <li class="tomato">대쉬 - L Shift</li>
+              <li class="tomato">상점 - Tab</li>
+              <li class="tomato">마우스 좌 - 공격</li>
+              <li class="tomato">마우스 우 - 스킬</li>
             </ul>
           </div>
         </section>
@@ -254,48 +284,138 @@
           data-background-video-muted
           data-background-size="contain"
           data-background-opacity="0.5"
-          style="justify-content: center; align-items: center; margin-top: 10vh"
-          id="flex-column"
+          style="justify-content: center; align-items: center"
+          class="flex-column"
         >
-          <h2 id="H2">시연</h2>
+          <h2 class="H2">시연</h2>
         </section>
-        <section id="flex-column">
-          <h2 id="H2">개선점</h2>
-          <div>
-            <ul id="flex">
-              <li id="blue">
-                <p>그래픽</p>
-                <p id="desc">이펙트(피격, 스킬 등)</p>
-                <p id="desc">UI(파티와 적의 체력)</p>
-              </li>
-              <li id="blue">
-                <p>환경설정</p>
-                <p id="desc">사운드 크기 조절</p>
-                <p id="desc">마우스 감도 조절</p>
-                <p id="desc">해상도</p>
-              </li>
+        <section class="flex-column">
+          <h2 class="H2">개선점</h2>
+          <div class="flex-row">
+            <ul>
+              <div class="blue">
+                <p class="tomato">그래픽</p>
+                <p class="desc">- 이펙트(피격, 스킬 등)</p>
+                <p class="desc">- UI(파티와 적의 체력)</p>
+                <p class="desc">- 로딩 Scene</p>
+              </div>
+            </ul>
+            <ul>
+              <div class="blue">
+                <p class="tomato">환경설정</p>
+                <p class="desc">- 사운드 크기 조절</p>
+                <p class="desc">- 마우스 감도 조절</p>
+                <p class="desc">- 해상도</p>
+              </div>
             </ul>
           </div>
         </section>
-        <section id="flex-column">
-          <h2 id="H2">추가 기능</h2>
-          <div>
-            <ul id="flex">
-              <li id="green">
-                <p>회원 시스템</p>
-                <p id="desc">반복 플레이를 위한 동기 부족</p>
-                <p id="desc">기타 프레임워크 도입(BE-Spring, DB)</p>
-                <p id="desc">치장 아이템 BM으로 이어질 수 있음</p>
-              </li>
-              <li id="green">
-                <p>룸 채팅</p>
-              </li>
-              <li id="green">
-                <p>시네머신 연출</p>
-                <p id="desc">현재 도전 중..</p>
-              </li>
+        <section class="flex-column">
+          <h2 class="H2">추가 기능</h2>
+          <div class="flex-row">
+            <ul>
+              <div class="yellow">
+                <p class="tomato">회원 시스템</p>
+                <p class="desc">- 반복 플레이 동기 부족</p>
+                <p class="desc">- 프레임워크 (BE-Spring, DB)</p>
+                <p class="desc">- BM - 치장 아이템</p>
+              </div>
+            </ul>
+            <ul style="margin: 0">
+              <div class="yellow">
+                <p class="tomato" style="margin: 0">채팅</p>
+                <p class="desc">- 사파리</p>
+              </div>
+            </ul>
+            <ul>
+              <div class="yellow">
+                <p class="tomato" style="margin: 0">시네머신 연출</p>
+                <p class="desc">- 노력 중..</p>
+              </div>
             </ul>
           </div>
+        </section>
+        <section class="flex-column">
+          <h2>MLD</h2>
+          <p class="desc">(Metaverse Luck Debugging)</p>
+          <div
+            style="
+              display: grid;
+              grid-template-columns: 40vh 40vh;
+              gap: 2vh;
+              grid-template-rows: 15vh 15vh 15vh;
+              justify-content: center;
+            "
+          >
+            <div
+              class="flex-row"
+              style="padding-right: auto; justify-content: flex-start"
+            >
+              <img class="img" src="pics/p8.png" style="margin: 0" />
+              <div>
+                <p class="blue" style="text-align: left">김민범</p>
+                <p class="yellow" style="text-align: left">보스</p>
+              </div>
+            </div>
+            <div
+              class="flex-row"
+              style="padding-right: auto; justify-content: flex-start"
+            >
+              <img class="img" src="pics/p9.png" style="margin: 0" />
+              <div>
+                <p class="blue" style="text-align: left">김주현</p>
+                <p class="yellow" style="text-align: left">플레이어</p>
+              </div>
+            </div>
+            <div
+              class="flex-row"
+              style="padding-right: auto; justify-content: flex-start"
+            >
+              <img class="img" src="pics/p10.png" style="margin: 0" />
+              <div>
+                <p class="blue" style="text-align: left">김상혁</p>
+                <p class="yellow" style="text-align: left">UI - 아이템</p>
+              </div>
+            </div>
+            <div
+              class="flex-row"
+              style="padding-right: auto; justify-content: flex-start"
+            >
+              <img class="img" src="pics/p11.png" style="margin: 0" />
+              <div>
+                <p class="blue" style="text-align: left">박한샘</p>
+                <p class="yellow" style="text-align: left">적 | 포톤</p>
+              </div>
+            </div>
+            <div
+              class="flex-row"
+              style="padding-right: auto; justify-content: flex-start"
+            >
+              <img class="img" src="pics/p12.png" style="margin: 0" />
+              <div>
+                <p class="blue" style="text-align: left">손준호</p>
+                <p class="yellow" style="text-align: left">UI - 씬</p>
+              </div>
+            </div>
+            <div
+              class="flex-row"
+              style="padding-right: auto; justify-content: flex-start"
+            >
+              <img class="img" src="pics/p13.png" style="margin: 0" />
+              <div>
+                <p class="blue" style="text-align: left">이동윤</p>
+                <p class="yellow" style="text-align: left">보스</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="flex-column" id="title">
+          <p></p>
+          <h2>Thanks !!!</h2>
+          <p class="thxReveal">
+            Made By
+            <img src="https://revealjs.com/images/logo/reveal-black-text.svg" />
+          </p>
         </section>
       </div>
     </div>
